@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <title>Kiwi.Com</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="hidden mm:block me-4" title="Cheap flights from Kiwi.com" alt="Cheap flights from Kiwi.com"
+                    src="https://images.kiwi.com/common/kiwicom-logo.svg" width="80" height="50">
+
+                <span class="Egypt d-none d-lg-inline position-relative fw-bold ">EGYPT</span>
+            </a>
+
+            <span class="Egypt d-lg-none position-absolute top-50 start-50 translate-middle fw-bold ">
+                EGYPT
+            </span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown border-0" style="outline: none; border:none">
+                        <a class="nav-link dropdown-toggle border border-secondary rounded-3" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trips
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Cairo</a></li>
+                            <li><a class="dropdown-item" href="#">Luxor</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Hurgada</a></li>
+                            <li><a class="dropdown-item" href="#">Alex</a></li>
+                            <li><a class="dropdown-item" href="#">Aswan</a></li>
+                            <li><a class="dropdown-item" href="#">Sharm El Shikh</a></li>
+                            <li><a class="dropdown-item" href="#">More...</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
+                    </li>
+                </ul>
+
+
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-lg-center gap-2 w-100 mt-2">
+
+                    <input class="form-control w-100 w-lg-auto search-input-lg" type="search" placeholder="Search"
+                        aria-label="Search">
+
+
+                    <div class="d-flex flex-row gap-2 two-btn">
+                        <button class="btn " type="submit">Search</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" style=" box-shadow: 0 0 2px 1px rgba(0, 143, 123, 0.25)" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-header" style=" background-color: #00a991;">
+                    <h5 class="modal-title" style=" color: #fff;">Login</h5>
+                    <button type="button" class="btn-close" style=" border-color: #00a991;"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="login.php" method="POST">
+                        <div class="mb-3">
+                            <label for="email" class="form-label" style=" color: #00a991;">Email address</label>
+                            <input type="email" class="form-control" style="border: 2px solid #00a991;" id="email"
+                                name="email" required>
+                            <div class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label" style=" color: #00a991;">Password</label>
+                            <input type="password" class="form-control" style="border: 2px solid #00a991;" id="password"
+                                name="password" required>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
+                            <label class="form-check-label" for="rememberMe" style="color: #00a991;">Remember me</label>
+                        </div>
+
+                        <div class="modal-footer modal-footer-custom">
+                            <button type="button" class="btn " data-bs-dismiss="modal"
+                                style="background-color: #00a991; border: 1px solid #00a991; color: #fff;">
+                                Close
+                            </button>
+
+                            <button type="submit" class="btn ms-auto "
+                                style="background-color: #00a991; border: 1px solid #00a991; color: #fff; ">
+                                Login
+                            </button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide  " data-bs-ride="carousel">
+        <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active position-relative">
+                <img src="images/CAIRO1.jpg" loading="lazy" class="d-block w-100" alt="cairo" data-bs-interval="false">
+                <div class="carousel-caption">
+                    <h5 style="font-size: 40px;">Cairo</h5>
+                    <p> We had such a great time in Cairo — history, culture, and unforgettable moments.</p>
+                    <button class="btn text-capitalize p-2 rounded-3"> visit us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/luxor1.jpg" loading="lazy" class="d-block w-100" alt="Luxor">
+                <div class="carousel-caption ">
+                    <h5 style="font-size: 40px;">Luxor</h5>
+                    <p> Luxor — the world’s greatest open-air museum. Walk among temples, tombs, and pharaohs’ legacy.
+                    </p>
+                    <button class="btn text-capitalize p-2 rounded-3">visit us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/koh-nangyuan-surat-thani-thailand.jpg" loading="lazy" class="d-block w-100" alt="Hurghada">
+                <div class="carousel-caption ">
+                    <h5 style="font-size: 40px;">Hurghada</h5>
+                    <p> Hurghada — where the desert meets the sea. A Red Sea haven for diving, sunshine, and endless
+                        adventure.</p>
+                    <button class="btn text-capitalize p-2 rounded-3">visit us </button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/baron1.jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5 style="font-size: 40px;">Baron Palace</h5>
+                    <p>Baron Palace — a stunning architectural gem in Heliopolis, blending Indian design with timeless
+                        elegance.</p>
+
+                    <button class="btn">visit us</button>
+                </div>
+            </div>
+
+            <div
+                class="icons d-flex flex-column justify-content-around align-items-end position-fixed end-0 pe-5 top-50 translate-middle-y mt-5">
+                <i class="fab fa-facebook-square mb-3 fs-1 "></i>
+                <i class="fab fa-whatsapp-square mb-3 fs-1 "></i>
+                <i class="fab fa-twitter-square mb-3 fs-1 "></i>
+                <i class="fab fa-linkedin mb-3 fs-1 "></i>
+                <i class="fab fa-instagram-square mb-3 fs-1 "></i>
+            </div>
+
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+
+
+
+
+
+        <div class="card intro-section-lg" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title radial-text" style="color: #252A31;">Welcome</h5>
+                <p class="card-text1">Planning your trip to Egypt? Explore Cairo, Alexandria, Luxor, and more with our
+                    all-inclusive tours. From hotels to transport, we handle everything — so you can relax and enjoy.
+
+                    24/7 support, every step of the way.</p>
+                <a href="#" class="btn radial-btn bg-white " style="font-weight: 500; color:#004030">Learn more</a>
+            </div>
+        </div>
+
+        <div class="card intro-section-sm" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title radial-text ">Welcome</h5>
+                <p class="card-text1">
+                    Planning your trip to Egypt? Explore Cairo, Alexandria, Luxor, and more with our all-inclusive
+                    tours. From hotels to transport, we handle everything — so you can relax and enjoy.
+
+                    24/7 support, every step of the way.</p>
+                <a href="#" class="btn radial-btn bg-white " style="font-weight: 500; color:#004030">Learn More</a>
+            </div>
+        </div>
+
+
+    </div>
+    <hr>
+    <div class="container-fluid div1 w-100 mb-3 rounded d-flex align-items-center justify-content-center"
+        style="height: 150px; background-color: #009f8b;">
+        <h2 class="text-white"> Top Travel Destinations in Egypt </h2>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item custom-shadow ">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button radial-text" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    GIZA CITY
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    Giza is famous for its ancient wonders, including the Great Pyramids and the Sphinx. These iconic
+                    monuments, built over 4,500 years ago, attract millions of visitors each year. The Pyramids of Giza
+                    are the last remaining wonder of the ancient world, showcasing the incredible engineering skills of
+                    the Pharaohs.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item custom-shadow ">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed radial-text" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    LUXOR CITY
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    Luxor, often called the world’s greatest open-air museum, is home to the majestic Karnak Temple and
+                    the Valley of the Kings. This city was once the ancient capital of Egypt, Thebes, and is filled with
+                    stunning temples, tombs, and hieroglyphics that tell the stories of Egypt’s golden age.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item custom-shadow">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed radial-text" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ALEXANDRIA
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    Alexandria, the Mediterranean jewel of Egypt, blends history with modernity. Founded by Alexander
+                    the Great, it boasts landmarks like the Citadel of Qaitbay and the ancient Library of Alexandria.
+                    The city’s charming coastline and vibrant culture make it a must-visit destination.
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="w-100 translator-header rounded d-flex justify-content-center align-items-center fw-bold"
+        style="height: 70px; background-color: #0f594f;">
+        <h2 class="text-white">Translate From Arabic To English</h2>
+    </div>
+
+    <div class="container-fluid" style="background-color:#009f8b; height: 290px; border:2px solid#278a71">
+        <div class="translator-box">
+            <p class="fs-4 pt-4 text-white">Write and Translate <span style="color: #0a3f38;">Press Here</span></p>
+
+            <div class="d-flex align-items-end gap-2 mb-3">
+                <button onclick="copyText(this)" class="btn btn-sm text-white radial-btn"
+                    style="background-color: #0a3f38;">Copy</button>
+                <span class="copiedMsg"
+                    style="display: none; color: white; background: #14c8b0; padding: 5px 10px; border-radius: 10px;">
+                    copied
+                </span>
+            </div>
+            <textarea class="form-control myText" style="background-color: white !important;" rows="5"
+                placeholder="translate:"></textarea>
+        </div>
+    </div>
+    <hr>
+    <div class="w-100 translator-header rounded d-flex justify-content-center align-items-center fw-bold"
+        style="height: 70px; background-color: #0f594f;">
+        <h2 class="text-white">Translate From English To Arabic</h2>
+    </div>
+
+    <div class="container-fluid" style="background-color:#009f8b; height: 290px; border:2px solid#278a71">
+        <div class="translator-box">
+            <p class="fs-4 pt-4 text-white">Write and Translate <span style="color: #0a3f38;">Press Here</span></p>
+
+            <div class="d-flex align-items-end gap-2 mb-3">
+                <button onclick="copyText(this)" class="btn btn-sm text-white radial-btn"
+                    style="background-color: #0a3f38;">Copy</button>
+                <span class="copiedMsg"
+                    style="display: none; color: white; background: #14c8b0; padding: 5px 10px; border-radius: 10px;">
+                    copied
+                </span>
+            </div>
+
+            <textarea class="form-control myText" style="background-color: white !important;" rows="5"
+                placeholder="translate:"></textarea>
+        </div>
+    </div>
+    <hr>
+    <div class="w-100 translator-header rounded d-flex justify-content-center align-items-center fw-bold"
+        style="height: 70px; background-color: #0f594f;">
+        <h2 class="text-white">Translate From Arabic To German</h2>
+    </div>
+
+    <div class="container-fluid" style="background-color:#009f8b; height: 290px;  border:2px solid#278a71">
+        <div class="translator-box">
+            <p class="fs-4 pt-4 text-white">Write and Translate <span style="color: #0a3f38;">Press Here</span></p>
+
+            <div class="d-flex align-items-end gap-2 mb-3">
+                <button onclick="copyText(this)" class="btn btn-sm text-white radial-btn"
+                    style="background-color: #0a3f38;">Copy</button>
+                <span class="copiedMsg"
+                    style="display: none; color: white; background: #14c8b0; padding: 5px 10px; border-radius: 10px;">
+                    copied
+                </span>
+            </div>
+
+            <textarea class="form-control myText" style="background-color: white !important;" rows="5"
+                placeholder="translate:"></textarea>
+        </div>
+    </div>
+    <hr>
+    <div class="img-fixed"></div>
+
+
+    <div class="w-100 card-header rounded d-flex justify-content-center align-items-center fw-bold text-radial111"
+        style="height: 70px; background-color: #009f8b;">
+        <h2 class="text-white radial-text1 radial-text11">POPULAR DESTINATION IN EGYPT </h2>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-around card-row">
+            <div class="ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/alahramat_msr_a7acd11ef6.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 100px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">CAIRO</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            Where pyramids meet modern energy. Explore ancient treasures, vibrant bazaars, and Nile
+                            magic in Egypt's dynamic capital.</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/aliskndryt_bb4fd764d6.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 30px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">ALEXANDRIA</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            The Mediterranean's romantic pearl. Discover ancient libraries, seaside forts, and
+                            cosmopolitan charm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/shutterstock_2164088641_0dbdb6dc4a.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 100px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">LUXOR</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            The world's greatest open-air museum. Walk among colossal temples and royal tombs along the
+                            Nile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/shutterstock_1519243514_ead2797924.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 100px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">ASWAN</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            Nubian charm meets river serenity. Discover colorful markets, Philae Temple, and sunset
+                            felucca rides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/msjd_alazhr_msr_964024ebbf.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 1px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.2rem; ">Al-AZHAR MOSQUE</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            The spiritual beacon of Islam for over 1000 years. Marvel at Fatimid architecture and
+                            scholarly heritage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/aleyn_alskhnt_05fe592ee7.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 10px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">AIN SOKHNA</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            Red Sea escape just an hour from Cairo. Pristine beaches meet mountain views in this
+                            tranquil resort haven.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya1 col-md-4 mb-4">
+                <div class="card card1 custom-card" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/dar_alawbra_d44b0eb3b9.webp"
+                            style="width: 95%; height: 100%; object-fit: cover;" alt="Cairo">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 10px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">OPERA HOUSE</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            Cairo's premier venue for world-class arts and culture in Zamalek.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya1 col-md-4 ">
+                <div class="card card1 custom-card mt-5" style="height: 500px; overflow: hidden;">
+                    <div
+                        style="height: 350px; padding: 0 1%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/alghrdqt_bacceb3364.webp" style="width: 95%; height: 100%; object-fit: cover;"
+                            alt="Hurgada">
+                    </div>
+                    <div class="card-body" style="height: 150px; padding: 0.5rem;">
+                        <div class="d-flex justify-content-around align-items-center mb-2" style="gap: 50px;">
+                            <h3 class="card-title m-0 radial-text" style="font-size: 1.5rem; ">HURGHADA</h3>
+                            <a href="#" class="btn radial-btn btn-sm" style="font-size: 1rem; white-space: nowrap;">Know
+                                More</a>
+                        </div>
+                        <p class="card-text mx-3 text-start" style="font-size: 1rem;">
+                            Red Sea paradise. Dive coral reefs, enjoy golden beaches, and experience desert adventures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="img-fixed img-fixed-1"></div>
+    <hr>
+    <div class="w-100 card-header rounded d-flex justify-content-center align-items-center fw-bold"
+        style="height: 70px; background-color: #009f8b; border:2px solid#278a71">
+        <h2 class="text-white radial-text1">THANKS FOR </h2>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="row justify-content-evenly card-row">
+            <div class="ya col-md-4 mb-4">
+                <div class="card card2 mt-3" style="height: 470px; overflow: hidden; position: relative;">
+                    <div
+                        style="height:500px; padding: 0 0%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/Yahia.png" style="width: 100%; height: 100%; object-fit: cover;" alt="yahia">
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="info" style="position: absolute; z-index: 2; top: 20px; width: 90%; left: 5%;">
+                        <h4 class="text-white mb-2 text-start " style="white-space: nowrap;">All Thanks and Appreciation
+                        </h4>
+                        <div class="text-white info1" style="font-size: 1rem;"><i class="far fa-clock"> June 10,
+                                2020</i>
+                        </div>
+                    </div>
+                    <div class="img-sm" style="position: absolute; z-index: 2; top: 58%; width: 90%; left: 5%;">
+                        <img src="images/Yahia.png" alt="" style="   width: 100px;  height: 130px;
+      
+       object-fit: cover;
+       border-radius: 51% 51% 51% 51% / 50% 50% 50% 50%; object-fit: cover; border: 2px solid white;">
+
+
+                        <p class="text-white  " style="white-space: nowrap; margin-bottom: 0px;">Eng: Yahia
+                            Ahmed
+                        </p>
+                        <p class="text-white " style="font-size: 1rem;"> Front End Devoleber
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya col-md-4 mb-4">
+                <div class="card card2 mt-3" style="height: 470px; overflow: hidden; position: relative;">
+                    <div
+                        style="height:500px; padding: 0 0%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/close-up-photo-young-successful-business-man-black-suit.jpg"
+                            style="width: 100%; height: 100%; object-fit: cover;" alt="yahia">
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="info" style="position: absolute; z-index: 2; top: 20px; width: 90%; left: 5%;">
+                        <h4 class="text-white mb-2 text-start " style="white-space: nowrap;">All Thanks and Appreciation
+                        </h4>
+                        <div class="text-white info1" style="font-size: 1rem;"><i class="far fa-clock"> August 22,
+                                2020</i>
+                        </div>
+                    </div>
+                    <div class="img-sm" style="position: absolute; z-index: 2; top: 58%; width: 90%; left: 5%;">
+                        <img src="images/close-up-photo-young-successful-business-man-black-suit.jpg" alt="" style="   width: 100px;  height: 130px;
+      
+       object-fit: cover;
+       border-radius: 51% 51% 51% 51% / 50% 50% 50% 50%; object-fit: cover; border: 2px solid white;">
+
+
+                        <p class="text-white " style="white-space: nowrap; margin-bottom: 0px;">Eng: Abdullah
+                            Ahmed
+                        </p>
+                        <p class="text-white " style="font-size: 1rem;"> Back End Develober
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ya col-md-4 mb-4">
+                <div class="card card2 mt-3" style="height: 470px; overflow: hidden; position: relative;">
+                    <div
+                        style="height:500px; padding: 0 0%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/istockphoto-1425262386-612x612.jpg"
+                            style="width: 100%; height: 100%; object-fit: cover; " alt="yahia">
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="info" style="position: absolute; z-index: 2; top: 20px; width: 90%; left: 5%;">
+                        <h4 class="text-white mb-2 text-start " style="white-space: nowrap;">All Thanks and Appreciation
+                        </h4>
+                        <div class="text-white info1" style="font-size: 1rem;"><i class="far fa-clock"> October 5 ,
+                                2020</i>
+                        </div>
+                    </div>
+                    <div class="img-sm" style="position: absolute; z-index: 2; top: 58%; width: 90%; left: 5%;">
+                        <img src="images/istockphoto-1425262386-612x612.jpg"
+                            alt="" style="   width: 100px;  height: 130px;
+      
+       object-fit: cover;
+       border-radius: 51% 51% 51% 51% / 50% 50% 50% 50%; object-fit: cover; border: 2px solid white;">
+
+
+                        <p class="text-white " style="white-space: nowrap; margin-bottom: 0px;">Eng: Zeyad Sayed
+
+                        </p>
+                        <p class="text-white" style="font-size: 1rem;"> Director of UI/UX
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="mt-5">
+
+    <h2 class="radial-text1 text-center mt-4 mb-3">EGYPT NEWS </h2>
+
+    <!-- بطاقة البودكاست -->
+    <div class="container podcast-card">
+
+        <div class="card card3 p-0 border-0 mt-4">
+            <div class="row g-0  flex-md-row flex-column-reverse">
+
+                <div class="col-12 col-md-8 p-4  podcast-content">
+                    <h1 class="display-5 mb-3 mt-3 radial-text bodcast1">Treasures of the Ancestors</h1>
+
+                    <p class="text-muted mb-3"><i class="fas fa-calendar-alt"> Mon, May 25th 2020 </i></p>
+                    <span class="line"></span>
+                    <p class="mt-2 ">Discover with us the secrets of the ancient Pharaonic civilization in this
+                        special episode, which takes you on an audio tour of Egypt's most important archaeological
+                        sites. From the towering pyramids of Giza to the enchanting temples of Luxor and Aswan, we
+                        reveal the latest archaeological discoveries and invite you to discover treasures you've never
+                        seen before.</p>
+
+                    <div class="d-flex align-items-center mt-5">
+                        <span class="badge1  text-dark me-2   "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-podcast">
+                                Podcast.</i></span>
+                        <span class="badge1  text-dark me-2  "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-clock"> 55
+                                mins</i></span>
+                        <button class=" badge2 btn   ms-2  "><i class="fas fa-play">Play Episode</i></button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-12 col-md-4  p-0 podcast-img-container">
+                    <img src="images/ancient-pottery-vessel-with-retro-design.jpg" alt="Podcast Cover"
+                        class=" podcast-image">
+                </div>
+            </div>
+        </div>
+        <div class="card card3 card13 p-0 border-0 mt-4">
+            <div class="row g-0 flex-md-row">
+
+                <div class="col-12 col-md-4 p-0 podcast-img-container podcast-img-container1">
+                    <img src="images/egyptian-wall-with-hieroglyphs (1).jpg" alt="Podcast Cover" class="podcast-image">
+                </div>
+
+                <div class="col-12 col-md-8 p-4 podcast-content">
+
+                    <h1 class="display-5 mb-3 mt-3 radial-text bodcast1">Egyptian museums</h1>
+                    <p class="text-muted mb-3"><i class="fas fa-calendar-alt"> Wednesday, June 21st, 2023 </i></p>
+                    <span class="line line1"></span>
+                    <p class="mt-2">In this episode, we review Egypt's most important museums, from the Egyptian Museum
+                        in Tahrir to the upcoming Grand Museum. Learn about the rare artifacts that tell the story of a
+                        civilization spanning thousands of years, and the efforts made to preserve this great legacy for
+                        future generations.</p>
+                    <div class="d-flex align-items-center mt-5">
+                        <span class="badge1  text-dark me-2   "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-podcast">
+                                Podcast.</i></span>
+                        <span class="badge1  text-dark me-2  "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-clock"> 45
+                                mins</i></span>
+                        <button class=" badge2 badge12 btn   ms-2  "><i class="fas fa-play">Play Episode</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card3 card23 p-0 border-0 mt-4">
+            <div class="row g-0  flex-md-row flex-column-reverse">
+
+                <div class="col-12 col-md-8 p-4  podcast-content">
+                    <h1 class="display-5 mb-3 mt-3 radial-text bodcast1">Sinai antiquities</h1>
+
+                    <p class="text-muted mb-3"><i class="fas fa-calendar-alt"> Tuesday, June 27th, 2023 </i></p>
+                    <span class="line line2"></span>
+                    <p class="mt-2 ">Sinai boasts a diverse heritage of Crusader fortresses, early Christian monuments,
+                        and historic trade routes. In this episode, we reveal the most prominent submerged
+                        archaeological sites that make Sinai an open-air museum, telling little-known chapters of
+                        Egyptian history.</p>
+
+                    <div class="d-flex align-items-center mt-5">
+                        <span class="badge1  text-dark me-2   "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-podcast">
+                                Podcast.</i></span>
+                        <span class="badge1  text-dark me-2  "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-clock"> 40
+                                mins</i></span>
+                        <button class=" badge2 badge22 btn   ms-2  "><i class="fas fa-play">Play Episode</i></button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-12 col-md-4  p-0 podcast-img-container">
+                    <img src="images/view-world-monument-celebrate-world-heritage-day.jpg" alt="Podcast Cover"
+                        class=" podcast-image">
+                </div>
+            </div>
+        </div>
+        <div class="card card3 card15 p-0 border-0 mt-4 ">
+            <div class="row g-0 flex-md-row">
+
+                <div class="col-12 col-md-4 p-0 podcast-img-container podcast-img-container1">
+                    <img src="images/old-historical-abu-simbel-temple-ramesses-ii-egypt.jpg" alt="Podcast Cover"
+                        class="podcast-image">
+                </div>
+
+                <div class="col-12 col-md-8 p-4 podcast-content">
+
+                    <h1 class="display-5 mb-3 mt-3 radial-text bodcast1">Temples of Upper Egypt</h1>
+                    <p class="text-muted mb-3"><i class="fas fa-calendar-alt"> Sunday, Mar 3, 2024 </i></p>
+                    <span class="line line3"></span>
+                    <p class="mt-2">Upper Egypt holds the secrets of unique Pharaonic temples, far from the tourist
+                        crowds. We explore with you:
+
+                        Rare small temples carved into the mountains
+
+                        Inscriptions reveal details of the daily lives of the ancients
+
+                        Mysterious religious rituals previously unknown.</p>
+                    <div class="d-flex align-items-center mt-5">
+                        <span class="badge1  text-dark me-2   "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-podcast">
+                                Podcast.</i></span>
+                        <span class="badge1  text-dark me-2  "
+                            style="padding: 3px 10px; background-color: #9a9a9a; border-radius:7px ; "><i
+                                class="fas fa-clock"> 45
+                                mins</i></span>
+                        <button class=" badge2 badge23 btn   ms-2  "><i class="fas fa-play">Play Episode</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="radial-text1 text-center mt-4 mb-3">JOIN US </h2>
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3 position-relative  text-center">
+
+                <h6 class="position-absolute top-0 start-0 end-0 d-flex justify-content-center align-items-center p-0 mt-2 text-dark fs-6"
+                    style="font-size: 25px !important;color:#009f8b !important">
+                    🔔 Subscribe Now </h6>
+                <img src="images/linkedin.jpg" alt="LinkedIn" class="podcast-image1 mx-auto ">
+                <a href="#"
+                    class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-center align-items-center p-1 m-0 text-dark fs-5   text-decoration-none"
+                    style="color:#009f8b !important">Go
+                    to link</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 position-relative">
+                <h6 class="position-absolute top-0 start-0 end-0 d-flex justify-content-center align-items-center p-0 mt-0 text-dark fs-6"
+                    style="font-size: 25px !important; margin-top: -5px !important; color:#009f8b !important">
+                    👥 Follow</h6>
+                <img src="images/whatsaap.webp" alt="YouTube" class="podcast-image1">
+                <a href="#"
+                    class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-center align-items-center pt-2 m-0 text-dark fs-5   text-decoration-none"
+                    style="color:#009f8b !important">Go
+                    to link</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 position-relative">
+                <h6 class="position-absolute top-0 start-0 end-0 d-flex justify-content-center align-items-center p-0 mt-2 text-dark fs-6"
+                    style="font-size: 25px !important; color:#009f8b !important">
+                    👍 Like the page</h6>
+                <img src="images/inestigram.jpg" alt="YouTube" class="podcast-image1">
+                <a href="#"
+                    class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-center align-items-center p-1 m-0 text-dark fs-5   text-decoration-none"
+                    style="color:#009f8b !important">Go
+                    to link</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 position-relative">
+                <h6 class="position-absolute top-0 start-0 end-0 d-flex justify-content-center align-items-center p-0 mt-2 text-dark fs-6"
+                    style="font-size: 25px !important; color:#009f8b !important">
+                    ▶️ Watch videos</h6>
+                <img src="images/youtube.jpg" alt="Instagram" class="podcast-image1">
+                <a href="#"
+                    class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-center align-items-center p-1 m-0 text-dark fs-5   text-decoration-none"
+                    style="color:#009f8b !important">Go
+                    to link</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-4" style="background-color:#009f8b; min-height: 500px;">
+        <div class="row justify-content-around align-items-start h-100 py-4">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <hr class="border-2 border-white w-100 mx-auto my-3"
+                    style="margin-top: -10px !important; border:1.5px solid #ffff ">
+                <div class="d-flex flex-column h-100 justify-content-between">
+
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="images/logo1.png" alt="Logo" width="80" height="80" class="rounded-circle me-3">
+                            <h3 class="text-white mb-0">Explore Egypt</h3>
+                        </div>
+                        <hr class="border-2 border-white w-100 mx-auto my-3" style=" border:1.5px solid #ffff ">
+                        <div class="text-center text-white">
+                            <p class="mb-2"><i class="fas fa-phone me-2"></i> Tel: +20-127-740-6793</p>
+                            <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Address : Cairo, Egypt</p>
+                            <p class="mb-0"><i class="fas fa-fax me-2"></i> Fax: +20-123-456-788</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <hr class="border-2 border-white w-100 mx-auto my-3"
+                    style="margin-top: -10px !important;  border:1.5px solid #ffff">
+                <div class="d-flex flex-column h-100 justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="images/logo1.png" alt="Logo" width="80" height="80" class="rounded-circle me-3">
+                            <h3 class="text-white mb-0">Important Links</h3>
+                        </div>
+                        <hr class="border-2 border-white w-100 mx-auto my-3" style=" border:1.5px solid #ffff ">
+                        <ul class="list-unstyled text-center text-white ">
+                            <li class="mb-2"><a href="#" class="text-dark finish">Popular Destinations</a></li>
+                            <li class="mb-2"><a href="#" class="text-dark finish">Cultural Attractions</a></li>
+                            <li class="mb-2"><a href="#" class="text-dark finish">Desert Adventures</a></li>
+                            <li class="mb-2"><a href="#" class="text-dark finish">Nile Cruises</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <hr class="border-2 border-white w-100 mx-auto my-3"
+                    style="margin-top: -10px !important;  border:1.5px solid #ffff">
+                <div class="d-flex flex-column h-100 justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="images/logo1.png" alt="Logo" width="80" height="80" class="rounded-circle me-3">
+                            <h3 class="text-white mb-0">Our Vision</h3>
+                        </div>
+                        <hr class="border-2 border-white w-100 mx-auto my-3" style=" border:1.5px solid #ffff ">
+                        <p class="text-white px-3 text-center mb-3">"To showcase Egypt's timeless wonders..."</p>
+                        <h5 class="text-white text-center">Why Choose Us?</h5>
+                        <ul class="list-unstyled text-white text-center ps-4">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Expert Guides</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Customized Tours</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2"></i> 24/7 Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-12 text-center py-3">
+                <hr class="border-2 border-white w-100 mx-auto"
+                    style="margin-top: -40px !important;  border:1.5px solid #ffff">
+                <!-- <p class="text-white mb-1 ">"Egypt - Where History Comes Alive"</p> -->
+                <p class="text-white small radial-text1">© 2023 Explore Egypt. All Rights Reserved.</p>
+            </div>
+        </div>
+        <hr class="border-2 border-white w-100 mx-auto" style="margin-top: -20px !important;  border:1.5px solid #ffff">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
