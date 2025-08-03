@@ -54,7 +54,7 @@ li {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 185px !important;
+  bottom: 190px !important;
   display: flex;
   justify-content: center;
   margin: 0;
